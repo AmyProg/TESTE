@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Dentro do html xmlns foi editado o que esta escrito abaixo -->
+<!-- Foi alterado o head e o body complementando com o h: no inico -->
+<!-- foi complementado uma linha dentro do body,Aperta no run,verificar se esta configurado e finish -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Ola Mundo</title>
+</h:head>
+<h:body>
+	<h:outputText value="Realizar Cadastro!"/>
+	
+	
+	<h:form>
+	<h:panelGrid columns="1">
+	
+	<br/><h:commandLink value="Cadastro de Cliente" action="cadastroCliente.xhtml" />
+	<h:commandLink value="Cadastro de Veiculo" action="cadastroVeiculo.xhtml"/>
+	<h:commandLink value= "Cadastro de Produtos" action= "cadastroProduto.xhtml"/>
+	<h:commandLink value= "Cadastro de Evento" action="cadastroEvento.xhtml"/>
+	
+	<br/><h:commandButton value="Sair" action="sair"/>
+	
+	
+	</h:panelGrid>
+	</h:form>
+	
+	
+</h:body>
+</html>

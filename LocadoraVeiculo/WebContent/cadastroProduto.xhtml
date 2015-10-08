@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Produtos</title>
+</h:head>
+<h:body>
+	<h:form>
+
+		<h:messages />
+		<h:panelGrid columns="2">
+
+		<h:outputLabel value="Nome:" for="nome_id"/>
+			<h:inputText id="nome_id" value="#{produtoBean.produto.nome}" required="true" requiredMessage="Seu nome é obrigatorio!" converterMessage="O nome deve ser um caracter!"/>
+			
+			<h:outputLabel value="Categoria:" for="categoria_id" />
+			<h:inputText id="categoria_id" value="#{produtoBean.produto.categoria}" required="true" requiredMessage="A categoria é obrigatória!" converterMessage="A categoria deve ser um caracter!"/>
+									
+			<h:outputLabel value="Data Produto:" for="dataProduto_id"/>
+			<h:inputText id="dataProduto_id" value="#{produtoBean.data}" required="true" requiredMessage="A data de Nascimento é obrigatório!" converterMessage="A data de Nascimento deve ser um numero!"/>
+			
+			<h:outputLabel value="Valor:" for="valor_id" />
+			<h:inputText id="valor_id" value="#{produtoBean.produto.valor}" required="true" requiredMessage="O valor é obrigatória!" converterMessage="O valor deve ser um número!"/>
+						
+			<h:outputLabel value="Quantidade:" for="quantidade_id"/>
+			<h:inputText id="quantidade_id" value="#{produtoBean.produto.quantidade}" required="true" requiredMessage="A quantidade é obrigatório!" converterMessage="A quantidade deve ser um número!"/>
+						
+			<h:commandButton value="Salvar" action="#{produtoBean.salvar}"/>
+			
+			<h:commandButton immediate="true" value="Voltar" action="index.xhtml"/>
+
+
+		</h:panelGrid>
+
+
+	</h:form>
+</h:body>
+</h:html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Locadora de Veiculo</title>
+</h:head>
+<h:body>
+	<h:form>
+	
+	<h:messages/>
+	<h:panelGrid columns="2">
+
+			<h:outputLabel value="Nome:" for="nome_id"/>
+			<h:inputText id="nome_id" value="#{clienteBean.cliente.nome}" required="true" requiredMessage="Seu nome é obrigatorio!" converterMessage="O nome deve ser um caracter!"/>
+			
+			<h:outputLabel value="cpf:" for="cpf_id" />
+			<h:inputText id="cpf_id" value="#{clienteBean.cliente.cpf}" required="true" requiredMessage="O cpf é obrigatória!" converterMessage="O cpf deve ser um número!" maxlength="14"/>
+			
+			<h:outputLabel value="rg:" for="rg_id"/>
+			<h:inputText id="rg_id" value="#{clienteBean.cliente.rg}" required="true" requiredMessage="O rg é obrigatória!" converterMessage="O rg deve ser um número!" maxlength="15"/>
+			
+			<h:outputLabel value="Data Nascimento:" for="dataNascimento_id"/>
+			<h:inputText id="dataNascimento_id" value="#{clienteBean.data}" required="true" requiredMessage="A data de Nascimento é obrigatório!" converterMessage="A data de Nascimento deve ser um numero!"/>
+			
+			<h:outputLabel value="Endereco:" for="endereco_id"/>
+			<h:inputText id="endereco_id" value="#{clienteBean.cliente.endereco}" required="true" requiredMessage="O seu endereco é obrigatório!" converterMessage="O seu endereco deve ser um caracter!"/>
+			
+			<h:commandButton value="Salvar" action="#{clienteBean.salvar}"/>
+			
+			<h:commandButton immediate="true" value="Voltar" action="index.xhtml"/>
+
+
+	</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+</h:html>

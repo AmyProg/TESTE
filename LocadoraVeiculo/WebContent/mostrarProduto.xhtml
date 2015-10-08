@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Cadastro de Produtos</title>
+</h:head>
+<h:body>
+<h1>Informacoes sobre os Produtos Castrados</h1>
+	<h:form>
+	
+	
+		<h:panelGrid columns="1">
+			
+			<h:outputText value="#{produtoBean.produto.nome}"/>
+			<h:outputText value="#{produtoBean.produto.categoria}"/>
+			<h:outputText value="#{produtoBean.data}"/>
+			<h:outputText value="#{produtoBean.produto.valor}"/>
+			<h:outputText value="#{produtoBean.produto.quantidade}"/>
+			<h:commandButton value="Novo Produto" action="#{produtoBean.novo}"/>
+							
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</h:html>

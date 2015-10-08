@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Locadora de Veiculo</title>
+</h:head>
+<h:body>
+<h1>Informacoes sobre o Cliente Castrados</h1>
+	<h:form>
+	
+	<!-- <h:outputText value="Nome:"/> (FICARIA ASSIM)Nome: emilia, e tbm tem que alterar as columns para 2; -->
+	
+		<h:panelGrid columns="2">
+			
+			<h:outputText value="Nome:"/>
+			<h:outputText value="#{clienteBean.cliente.nome}"/>
+			<h:outputText value="#{clienteBean.cliente.cpf}"/>
+			<h:outputText value="#{clienteBean.cliente.rg}"/>
+			<h:outputText value="#{clienteBean.data}"/>
+			<h:outputText value="#{clienteBean.cliente.endereco}"/>
+			<h:commandButton value="Novo Cliente" action="#{clienteBean.novo}"/>
+							
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</h:html>

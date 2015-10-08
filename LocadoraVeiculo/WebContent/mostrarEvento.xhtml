@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Evento</title>
+</h:head>
+<h:body>
+	<h1>Informações sobre o Evento Cadastrado</h1>
+	<h:form>
+		<h:panelGrid colummns="1">
+			<h:outputText value="Data:"/>
+			<h:outputText value="#{eventoBean.data}" />
+			<h:outputText value="Tipo:"/>
+			<h:outputText value="#{eventoBean.evento.tipo}" />
+			<h:outputText value="Anotacao:"/>
+			<h:outputText value="#{eventoBean.evento.anotaçao}" />
+			<h:outputText value="Responsavel:"/>
+			<h:outputText value="#{eventoBean.evento.responsavel}" />
+			<h:outputText value="Local:"/>
+			<h:outputText value="#{eventoBean.evento.local}" />
+			<h:outputText value="Duracao"/>
+			<h:outputText value="#{eventoBean.evento.duraçao}" />
+			
+			<h:commandButton value="Novo Evento" action="#{eventoBean.novo}" />
+
+
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</h:html>

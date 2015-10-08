@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Locadora de Veículos</title>
+</h:head>
+<h:body>
+	<h:form>
+		<!--  <h:outputLabel value="Montadora:" for="montadora_id"/>
+			<h:inputText id="montadora_id" value="#{veiculoBean.veiculo.montadora}" required="true" requiredMessage="A montadora é obrigatória!"/>-->
+	
+		<!-- <h:outputLabel value="Modelo:" for="modelo_id"/>
+			<h:inputText id="modelo_id" value="#{veiculoBean.veiculo.modelo}" required="true" requiredMessage="O modelo é obrigatório!"/> -->
+		
+		<h:panelGrid columns="2">
+			
+			<h:outputLabel value="Montadora:" for="montadora_id"/>
+			<h:selectOneMenu id="montadora_id" value="#{veiculoBean.veiculo.montadora}">
+							<f:selectItem  itemLabel="Volkswagem" itemValue="Volkswagem"/>
+							<f:selectItem  itemLabel="Corsa" itemValue="Corsa"/>
+							<f:selectItem  itemLabel="Honda" itemValue="Honda"/>
+							<f:selectItem  itemLabel="Fox" itemValue="Fox"/>
+							<f:selectItem  itemLabel="Fiat" itemValue="Fiat"/>
+							
+			</h:selectOneMenu>
+			
+			<h:outputLabel value="Modelo:" for="modelo_id"/>
+			<h:selectOneRadio id="modelo_id" value="#{veiculoBean.veiculo.modelo}">
+							<f:selectItem  itemLabel="Fusca" itemValue="Fusca"/>
+							<f:selectItem  itemLabel="Hb20" itemValue="Hb20"/>
+							<f:selectItem  itemLabel="Ferrary" itemValue="Ferrary"/>
+							<f:selectItem  itemLabel="Chevet" itemValue="Chevet"/>
+							<f:selectItem  itemLabel="Golf" itemValue="Golf"/>
+							
+			</h:selectOneRadio>
+			
+			
+			
+			<h:outputLabel value="Ano:" for="ano_id"/>
+			<h:inputText id="ano_id" value="#{veiculoBean.veiculo.ano}" required="true" requiredMessage="O ano é obrigatório!" converterMessage="O ano deve ser um número!"/>
+			
+			<h:outputLabel value="Quilometragem:" for="quilometragem_id" />
+			<h:inputText id="quilometragem_id" value="#{veiculoBean.veiculo.quilometragem}" required="true" requiredMessage="A quilometragem é obrigatória!" converterMessage="A quilometragem deve ser um número!"/>
+			
+			<h:outputLabel value="Placa:" for="placa_id"/>
+			<h:inputText id="placa_id" value="#{veiculoBean.veiculo.placa}" required="true" requiredMessage="A placa é obrigatória!"/>
+			
+			<h:outputLabel value="Valor:" for="valor_id"/>
+			<h:inputText id="valor_id" value="#{veiculoBean.veiculo.valor}" required="true" requiredMessage="O valor é obrigatório!" converterMessage="O valor deve ser um numero!"/>
+			
+				<h:commandButton value="Salvar" action="#{veiculoBean.salvar}"/>
+				<h:commandButton immediate="true" value="Voltar" action="index.xhtml"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

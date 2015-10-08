@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Evento</title>
+</h:head>
+
+<h:body>
+	<h:form>
+
+		<h:messages />
+		<h:panelGrid>
+
+
+			<h:outputLabel value="Data:" for="data_id" />
+			<h:inputText id="data_id" value="#{eventoBean.data}" required="true"
+				requiredMessage="A data é obrigatório!"
+				converterMessage="A data deve ser um numero!" />
+
+			<h:outputLabel value="Tipo:" for="tipo_id" />
+			<h:selectOneRadio id="tipo_id" value="#{eventoBean.evento.tipo}">
+				<f:selectItem itemLabel="Reuniao"  itemValue="Reuniao"/>
+				<f:selectItem itemLabel="Lazer" itemValue="Lazer"/>
+				<f:selectItem itemLabel="Visita" itemValue="Visita"/>
+				
+			</h:selectOneRadio>
+
+			<h:outputLabel value="Anotação" for="anotaçao_id" />
+			<h:inputText id="anotaçao_id" value="#{eventoBean.evento.anotaçao}"
+				required="true"
+				requiredMessage="Faça uma anotação!Obrigada pela anotação!"
+				converterMessage="A sua anotação deve ser em caracter"
+				maxlength="100"/>
+
+			<h:outputLabel value="Responsavel" for="responsavel_id" />
+			<h:selectOneMenu id="responsavel_id" value="#{eventoBean.evento.responsavel}">
+				<f:selectItem itemLabel="Joao" itemValue="Joao" />
+				<f:selectItem itemLabel="Maria" itemValue="Maria" />
+				<f:selectItem itemLabel="Zeca" itemValue="Zeca" />
+				<f:selectItem itemLabel="Carol" itemValue="Carol" />
+			</h:selectOneMenu>
+
+			<h:outputLabel value="Local" for="local_id" />
+			<h:inputText id="local_id" value="#{eventoBean.evento.local}"
+				required="true" requiredMessage="Informe o Local!Obrigada!"
+				converterMessage="O seu Local deve ser em caracter" maxlength="60" />
+
+			<h:outputLabel value="Duração" for="duração_id" />
+			<h:inputText id="duraçao_id" value="#{eventoBean.evento.duraçao}"
+				required="true" requiredMessage="Informe a duração!Obrigada!"
+				converterMessage="A sua duração deve ser em numeros" />
+
+			<h:commandButton value="Salvar" action="#{eventoBean.salvar}"/>
+			
+			<h:commandButton immediate="true" value="Voltar" action="index.xhtml"/>
+
+		</h:panelGrid>
+
+
+	</h:form>
+
+</h:body>
+</html>
